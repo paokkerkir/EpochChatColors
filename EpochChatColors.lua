@@ -53,6 +53,7 @@ CSV = CSV..",leveling guild=leveling-Guild,escort quest=escort-quest,guild leade
 CSV = CSV..",guild charter=Guild-charter,raid times=raid-times,honorable kill=HonorableKill"
 CSV = CSV..",burning crusade=BurningCrusade,classic wow=ClassicWoW,world pvp=world-PvP"
 CSV = CSV..",server first=ServerFirst,corpse camp=corpse-camp,ninja loot=ninjaloot,tarren mill=TarrenMill,arms warrior=arms-warrior"
+CSV = CSV..",glittermurk mine=GMM,glittermurk mines=GMM,baradin hold=BH"
 local cPos, chReplace1, chReplace2, cp1, cp2 = nil, {}, {}
 for part in string.gmatch(CSV, "([^,]+)") do
     cPos = strfind(part, "=")
@@ -66,13 +67,13 @@ for part in string.gmatch(CSV, "([^,]+)") do
     end
 end
 
-CSV = "lf,lfm,lfg,lf1m,lf2m,lf3m,lf4m,wtb,buying,wts,selling,wtt,brd,lbrs,ubrs,bwl,zg,zf,dmw,dme,dmn,epl,wpl,stv,sm,aq,aq20,aq40,mc,dmf,dps,rdps,f,sw,bs,av,wsg,ab"
+CSV = "lf,lfm,lfg,lf1m,lf2m,lf3m,lf4m,wtb,buying,wts,selling,wtt,brd,lbrs,ubrs,bwl,zg,zf,dmw,dme,dmn,epl,wpl,stv,sm,aq,aq20,aq40,mc,dmf,dps,rdps,f,sw,bs,av,wsg,ab,gmm,bh"
 local chatUP = {}
 for part in string.gmatch(CSV, "([^,]+)") do
     if part ~= "" then table.insert(chatUP, part) end
 end
 
-CSV = "ES,BB,BM,FARM,QUEST,ARM,AH,IF,SS,TM,UC,TB,ORG,SW,FP,GS"
+CSV = "ES,BB,BM,FARM,QUEST,ARM,AH,IF,SS,TM,UC,TB,ORG,SW,FP,GS,GMM,BH"
 local chLocBig = {}
 for part in string.gmatch(CSV, "([^,]+)") do
     if part ~= "" then table.insert(chLocBig, part) end
