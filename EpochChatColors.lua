@@ -54,6 +54,7 @@ CSV = CSV..",guild charter=Guild-charter,raid times=raid-times,honorable kill=Ho
 CSV = CSV..",burning crusade=BurningCrusade,classic wow=ClassicWoW,world pvp=world-PvP"
 CSV = CSV..",server first=ServerFirst,corpse camp=corpse-camp,ninja loot=ninjaloot,tarren mill=TarrenMill,arms warrior=arms-warrior"
 CSV = CSV..",glittermurk mine=GMM,glittermurk mines=GMM,baradin hold=BH"
+CSV = CSV..",stonetalon caverns=SC,stonetalon cavern=SC,gilijim isle=GI"
 local cPos, chReplace1, chReplace2, cp1, cp2 = nil, {}, {}
 for part in string.gmatch(CSV, "([^,]+)") do
     cPos = strfind(part, "=")
@@ -67,13 +68,13 @@ for part in string.gmatch(CSV, "([^,]+)") do
     end
 end
 
-CSV = "lf,lfm,lfg,lf1m,lf2m,lf3m,lf4m,wtb,buying,wts,selling,wtt,brd,lbrs,ubrs,bwl,zg,zf,dmw,dme,dmn,epl,wpl,stv,sm,aq,aq20,aq40,mc,dmf,dps,rdps,f,sw,bs,av,wsg,ab,gmm,bh"
+CSV = "lf,lfm,lfg,lf1m,lf2m,lf3m,lf4m,wtb,buying,wts,selling,wtt,brd,lbrs,ubrs,bwl,zg,zf,dmw,dme,dmn,epl,wpl,stv,sm,aq,aq20,aq40,mc,dmf,dps,rdps,f,sw,bs,av,wsg,ab,gmm,bh,sc,gi"
 local chatUP = {}
 for part in string.gmatch(CSV, "([^,]+)") do
     if part ~= "" then table.insert(chatUP, part) end
 end
 
-CSV = "ES,BB,BM,FARM,QUEST,ARM,AH,IF,SS,TM,UC,TB,ORG,SW,FP,GS,GMM,BH"
+CSV = "ES,BB,BM,FARM,QUEST,ARM,AH,IF,SS,TM,UC,TB,ORG,SW,FP,GS,GMM,BH,SC,GI"
 local chLocBig = {}
 for part in string.gmatch(CSV, "([^,]+)") do
     if part ~= "" then table.insert(chLocBig, part) end
@@ -90,7 +91,7 @@ CSV = CSV..",blackfathomdeeps,blackfathomdeep,blackfathom,bfd,razorfendowns,razo
 CSV = CSV..",shadowfangkeep,sfk,stranglethorn,princess-runs,maraudon:princess-runs,atal'hakkar,atal'hakar"
 CSV = CSV..",scarletmonastery,sm,graveyard,graveyards,gy,library,lib,cathedral,cath,armory,cath-arms,sm:arms,sm:arm"
 CSV = CSV..",sunkentemple,st,uldaman,ulda,uld,zul'farrak,zulfarrak,zulfarak,zf,maraudon,mara,maraudon:princess,mara:princess"
-CSV = CSV..",scholomance,scholo,sholo,stratholme,strath,strat,ud,strat:ud,live,brm,brd,arena,brd:princess,lbrs,ubrs,rend"
+CSV = CSV..",scholomance,scholo,sholo,stratholme,strath,strat,ud,strat:ud,live,brm,brd,brd:princess,lbrs,ubrs,rend"
 CSV = CSV..",diremaul,dm,dme,dm:e,dmn,dm:n,dmw,dm:w,dm:east,dm:north,dm:west,tribute,trib"
 CSV = CSV..",karazhan,kara,kara5,kara10,kara20,kara40,zulgurub,zul'gurub,zg,onyxia,kazzak,ony,nefarian,nefa"
 CSV = CSV..",moltencore,mc,blackwinglair,bwl,ahn'qiraj,ahnqiraj,aq,aq20,aq40,naxxramas,naxramas,naxx,nax"
@@ -121,7 +122,7 @@ CSV = CSV..",twink,twinks,battlemasters,battlemaster,horde,combatlog,oops,nvm,hk
 CSV = CSV..",spam,spamming,reported,ignore,ignoring,bot,bots,lunatic,lunatics,gank,ganker,gankers,ganking,ganked"
 CSV = CSV..",lag,lags,lagging,disconnect,disconnecting,disconnects,cod,nerfed,bugged,invite,inv"
 CSV = CSV..",scam,scammer,scamming,world-pvp,dmg,corpse-camp,camping,corpse,devilsaur,ninjaloot,ninjalooter"
-CSV = CSV..",ninjad,unseen,mods,offline,toxic,def,defense,hr"
+CSV = CSV..",ninjad,unseen,mods,offline,toxic,def,defense,hr,1v1,2v2,3v3,arena,arenas"
 local chRed = {}
 for part in string.gmatch(CSV, "([^,]+)") do
     if part ~= "" then table.insert(chRed, part) end
