@@ -1,0 +1,17 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.blizzard.com/wow/ui/
+..\FrameXML\UI.xsd">
+
+    <Script file="EpochChatColors.lua"/>
+
+<Frame name="EpochChatColorsFrame" parent="UIParent" hidden="true">
+    <Scripts>
+        <OnLoad>
+            EpochChatColors_OnLoad(self);
+        </OnLoad>
+        <OnEvent>
+            EpochChatColors_OnEvent(self, event);
+        </OnEvent>
+    </Scripts>
+</Frame>
+
+</Ui>

@@ -1,0 +1,8 @@
+## Interface: 30300
+## Title: EpochChatColors
+## Notes: Improved |cFF80FF80guildchat|r and |cFFFFFF00system|r messages|cFFC0C0C0: reformatted, colored, extra infos, keyword highlights
+## Author: Bennylavaa
+## Original Author: DaMaGepy
+## Version: 1.0.0
+EpochChatColors.xml
+EpochChatColors_Updater.lua
