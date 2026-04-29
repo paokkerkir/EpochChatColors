@@ -551,21 +551,13 @@ function EpochChatColors_ClassData(arg2, class, level)
     if not arg2 then return "" end
 
     if not class then
-        for name, color in pairs(EpochChatColors_Names) do
-            if name == arg2 then
-                return color, EpochChatColors_Level[arg2]
-            end
+        if EpochChatColors_Names[arg2] then
+            return EpochChatColors_Names[arg2], EpochChatColors_Level[arg2]
         end
         return ""
     end
 
-    local found
-    for name, color in pairs(EpochChatColors_Names) do
-        if name == arg2 and EpochChatColors_Level[name] == level then
-            found = true
-        end
-    end
-    if not found then
+    if not (EpochChatColors_Names[arg2] and EpochChatColors_Level[arg2] == level) then
         EpochChatColors_Names[arg2] = EpochChatColors_GetClassColor(class)
         EpochChatColors_Level[arg2] = level or 0
     end
